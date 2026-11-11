@@ -1,0 +1,6 @@
+- type: lobbyBackground
+  id: RunningLate
+  background: /Textures/_Gearstation/LobbyScreens/RunningLate.webp
+  title: lobby-state-background-runninglate-title
+  artist: lobby-state-background-runninglate-artist
+
