@@ -4,3 +4,9 @@
   title: lobby-state-background-runninglate-title
   artist: lobby-state-background-runninglate-artist
 
+- type: lobbyBackground
+  id: DrunkardsRedux
+  background: /Textures/_Gearstation/LobbyScreens/DrunkardsSpreeRedux.png
+  title: lobby-state-background-drunkardsspreeredux-title
+  artist: lobby-state-background-drunkardsspreeredux-artist
+
