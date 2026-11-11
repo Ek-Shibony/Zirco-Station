@@ -22,13 +22,13 @@ public abstract partial class SharedRestrictNestingItemSystem : EntitySystem
     public override void Initialize()
     {
         //register a new verb for picking up the mob
-        SubscribeLocalEvent<RestrictNestingItemComponent, GetVerbsEvent<InteractionVerb>>(AddPickupVerb);
+        SubscribeLocalEvent<RestrictNestingItemComponent, GetVerbsEvent<AlternativeVerb>>(AddPickupVerb); // Gear - Alt pickup
         SubscribeLocalEvent<RestrictNestingItemComponent, RestrictNestingItemPickupDoAfterEvent>(FinishPickup);
         SubscribeLocalEvent<RestrictNestingItemComponent, DoAfterAttemptEvent<RestrictNestingItemPickupDoAfterEvent>>(DuringPickup);
         SubscribeLocalEvent<RestrictNestingItemComponent, StripAttemptEvent>(StripAttempt);
     }
 
-    private void AddPickupVerb(Entity<RestrictNestingItemComponent> ent, ref GetVerbsEvent<InteractionVerb> args)
+    private void AddPickupVerb(Entity<RestrictNestingItemComponent> ent, ref GetVerbsEvent<AlternativeVerb> args) // Gear - Alt pickup
     {
         //skip if its yourself
         if (args.Target == args.User)
@@ -43,7 +43,7 @@ public abstract partial class SharedRestrictNestingItemSystem : EntitySystem
 
         var user = args.User;
         var target = args.Target;
-        var verb = new InteractionVerb()
+        var verb = new AlternativeVerb() // Gear - Alt pickup
         {
             Text = Loc.GetString("pick-up-verb-get-data-text"),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/pickup.svg.192dpi.png")),
