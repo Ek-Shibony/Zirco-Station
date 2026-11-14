@@ -588,7 +588,7 @@
   playTimeTracker: JobERTJanitor
   requirements:
   - !type:RoleTimeRequirement
-    department: Janitor
+    role: Janitor
     time: 5h
   setPreference: false
   startingGear: ERTJanitorGearEVA

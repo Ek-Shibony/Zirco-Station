@@ -10,11 +10,11 @@
     - !type:RoleTimeRequirement
       role: JobMiningSpecialist
       time: 5h # Starlight
-    - !type:OverallPlaytimeRequirement
-      time: 20h
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 10h # Starlight
+    - !type:OverallPlaytimeRequirement
+      time: 20h
     - !type:TraitsRequirement # Starlight
       traits:
         - Iterator
